@@ -10,6 +10,7 @@ function App() {
       <MovieList />
       <ChoresList />
       <BookList />
+      <HobbyLinks />
     </div>
   );
 }

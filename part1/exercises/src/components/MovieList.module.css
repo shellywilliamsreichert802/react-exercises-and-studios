@@ -1,5 +1,14 @@
-.movieText {
+/* .movieText {
    color: black;
+}
+
+.movieHeading {
+   color: black;
+} */
+.movieText {
+   color: blueviolet;
+   font-size: 1.3vw;
+   text-align: left;
 }
 
 .movieHeading {
