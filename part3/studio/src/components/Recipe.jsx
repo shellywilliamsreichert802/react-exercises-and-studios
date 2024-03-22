@@ -1,5 +1,5 @@
 // import React from 'react';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 const RecipeAuthor = () => {
    let authorLink = "https://natashaskitchen.com/wp-content/uploads/2018/05/Banana-Bread-Recipe-6.jpg";
@@ -29,41 +29,29 @@ const RecipeIngredients = () => {
       "1/2 tsp vanilla extract",
       "1 c walnuts",
       "1/2 c rasins (sub craisins)",
-   ];
+      ];
 
+   let ingedientListItems = ingredients.map((ingredient, index) => {
+      return <li key={index}>{ingredient}</li>
+   })
    return(
       <div>
          <h3>Recipe Ingredients</h3>
          <ul>
-            <li>{ingredients[0]}</li>
-            <li>{ingredients[1]}</li>
-            <li>{ingredients[2]}</li>
-            <li>{ingredients[3]}</li>
-            <li>{ingredients[4]}</li>
-            <li>{ingredients[5]}</li>
-            <li>{ingredients[6]}</li>
-            <li>{ingredients[7]}</li>
-            <li>{ingredients[8]}</li>
-            <li>{ingredients[9]}</li>
-
-         {/* <ul>
-            {ingredients.map((ingredient, index) => (
-               <li key={index}>{ingredient}</li>
-            ))} */}
+            {ingedientListItems}
          </ul>
       </div>
    );
-}
-
+}  
+      
 const RecipeDescription = () => {
-   const recipeTitle = "Delicious Banana Bread"; // Replace with the actual recipe title
-   const recipeDescription = "A moist and flavorful banana bread recipe perfect for breakfast or snack."; // Replace with the actual recipe description
-
+   // const recipeTitle = "Delicious Banana Bread"; // Replace with the actual recipe title
+   // const recipeDescription = "A moist and flavorful banana bread recipe perfect for breakfast or snack."; // Replace with the actual recipe description
    return (
       <div> 
          <div>
-            <h1>{recipeTitle}</h1>
-            <p>{recipeDescription}</p>
+            <h1>Delicious Banana Bread</h1>
+            <p></p>
          </div>
          <div className="recipePhotoBlock">
             <RecipeIngredients />
@@ -73,13 +61,14 @@ const RecipeDescription = () => {
    );
 }
 
+
 const RecipePhoto = () => {
    return (
-      <img src="" alt="" className="imageUpdates"/>
+      <img src="https://natashaskitchen.com/wp-content/uploads/2018/05/Banana-Bread-Recipe-6-250x250.jpg" alt="Delicous Banana Bread" className="imageUpdates"/>
    );
 }
 
-export default function BoardAssignment () {
+export default function RecipeDisplay () {
    return(
       <div className="recipePhotoBlock">
          <RecipePhoto />

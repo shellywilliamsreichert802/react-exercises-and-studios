@@ -25,7 +25,15 @@ export default function StatusChange () {
             </label>
             <input type="submit" />
          </form>
-         {recipeStatus ? (
+
+         <p>{notes.length ? notes: "My Recipe Notes aren't here!"}</p>
+
+         <p>{recipeStatus ? "This recipe was delicious!" : "I have not tried this recipe!"}</p>
+      </div>
+   );
+}
+
+         /* {recipeStatus ? (
             <p>Your Recipe Notes: {notes}</p>
          ) : (
             <div>
@@ -35,4 +43,4 @@ export default function StatusChange () {
        )}
     </div>
    );
-}
+} */
